@@ -16,10 +16,10 @@ class MainPage(webapp2.RequestHandler):
     def get(self):
         posts = db.GqlQuery("SELECT * FROM Post ORDER BY created DESC")
         t = jinja_env.get_template('index.html')
-        self.response.out.write(t.render( posts= posts ))
+        self.response.out.write(t.render( posts=posts ))
 
 class NewPost(webapp2.RequestHandler):
-    def get(self, error=""):
+    def get(self,  error=""):
         t = jinja_env.get_template('new-post.html')
         self.response.out.write(t.render(error=error))
 
@@ -29,6 +29,17 @@ class NewPost(webapp2.RequestHandler):
         if title and text:
             new_post = Post(title=title, text=text)
             new_post.put()
+            id = str(new_post.key().id())
+            self.redirect('/'+id)
+
         else:
             self.get(error="You have to put something in the both filds.")
-app = webapp2.WSGIApplication([('/', MainPage), ('/new-post', NewPost)])
+
+class PostGet(webapp2.RequestHandler):
+    def get(self, id):
+        t = jinja_env.get_template('post.html')
+        post = Post.get_by_id(ids=int(id))
+        self.response.out.write(t.render( post=post ))
+
+
+app = webapp2.WSGIApplication([('/', MainPage), ('/(\d+)', PostGet), ('/new-post', NewPost)])
