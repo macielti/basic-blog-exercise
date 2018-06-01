@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-    <form method="post">
-        <input type="text" name="title" value="{{ value }}">
+    <form style="font-family: sans-serif; margin-top:50px;" method="post">
+        <table>
+            <tr>
+                <td>Title: </td>
+                <td> <input type="text" name="title" value="{{ value }}" required> </td>
+            </tr>
+            <tr>
+                <td> Content: </td>
+                <td> <textarea name="content" rows="8" cols="80" required></textarea> </td>
+            </tr>
+        </table>
+        <p style="color:red;" >{{ error }}</p>
+        <input style="font-size:14px;" type="submit" value="Post">
     </form>
 {% endblock %}

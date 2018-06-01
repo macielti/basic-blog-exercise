@@ -19,8 +19,16 @@ class MainPage(webapp2.RequestHandler):
         self.response.out.write(t.render( posts= posts ))
 
 class NewPost(webapp2.RequestHandler):
-    def get(self):
+    def get(self, error=""):
         t = jinja_env.get_template('new-post.html')
-        self.response.out.write(t.render())
+        self.response.out.write(t.render(error=error))
 
+    def post(self):
+        title = self.request.get('title')
+        text = self.request.get('content')
+        if title and text:
+            new_post = Post(title=title, text=text)
+            new_post.put()
+        else:
+            self.get(error="You have to put something in the both filds.")
 app = webapp2.WSGIApplication([('/', MainPage), ('/new-post', NewPost)])
