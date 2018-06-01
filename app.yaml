@@ -1,6 +1,7 @@
-application: BasicBlogExercise
+application: basic-blog-project
 version: 1
 threadsafe: yes
+runtime: python27
 
 handlers:
 - url: .*
@@ -8,4 +9,6 @@ handlers:
 
 libraries:
 - name: webapp2
-  version: "2.5.2" 
+  version: "2.5.2"
+- name: jinja2
+  version: latest

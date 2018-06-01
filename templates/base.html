@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+
+        <style media="screen">
+            .container{
+                display: grid;
+            }
+            h1{
+                font-family: sans-serif;
+            }
+            div .header a {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <a href="/" ><h1>macielti's blog</h1></a>
+                <hr>
+            </div>
+
+            {% block content %}
+            {% endblock %}
+
+            <div class="">
+                <a href="/new-post">Make a new post.</a>
+            </div>
+
+        </div>
+    </body>
+</html>

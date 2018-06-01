@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    {% if posts.count() == 0 %}
+        <h3>No posts found, please make a new post.</h3>
+
+    {% else %}
+        {% for post in posts %}
+        <h2>{{ post.title }}</h2>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
