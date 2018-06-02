@@ -1,70 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt" dir="ltr">
     <head>
         <meta charset="utf-8">
-
-        <style media="screen">
-            body, html{
-                margin: 0;
-                width: 100%;
-                height: 100%;
-
-
-            }
-            .header{
-
-            }
-            .container{
-                font-family: sans-serif;
-                min-height: 100%;
-                display: grid;
-                grid-template-columns: 75%;
-                grid-template-rows: 70px auto;
-                justify-content: center;
-
-            }
-            h1{
-                font-family: sans-serif;
-                margin-bottom: 0px;
-
-            }
-            div .header a {
-                text-decoration: none;
-                color: black;
-                margin-bottom: 0px;
-            }
-            .footer{
-                align-self: baseline;
-                height: auto;
-                background-color: black;
-                width: 100%;
-            }
-            .new{
-                color: white;
-                font-family: sans-serif;
-                font-size: 20px;
-            }
-            pre{
-                font-family: sans-serif;
-                font-size: 18px;
-            }
-        </style>
-
+        <link type="text/css" rel="stylesheet" href="/css/style.css">
         <title>macielti's blog</title>
     </head>
     <body>
         <div class="container">
             <div class="header">
-                <center><a href="/" ><h1>macielti's blog</h1></a><center>
+                <h1><a href="/">macielti's blog</a></h1>
             </div>
-            <div class="content">
+            <div class="article">
                 {% block content %}
                 {% endblock %}
             </div>
-
-        </div>
-        <div class="footer">
-            <a class="new" href="/new-post">Make a new post.</a>
+            <div class="footer">
+                <a href="/new-post">Make a new post.</a>
+            </div>
         </div>
     </body>
 </html>

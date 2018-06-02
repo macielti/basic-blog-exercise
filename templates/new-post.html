@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-    <form style="font-family: sans-serif; margin-top:50px;" method="post">
+    <form style="font-family: sans-serif;" method="post">
         <table>
             <tr>
                 <td>Title: </td>
-                <td> <input type="text" name="title" value="{{ value }}" required> </td>
+                <td> <input class="title" type="text" name="title" value="{{ value }}" required> <br></td>
             </tr>
             <tr>
                 <td> Content: </td>
-                <td> <textarea name="content" rows="8" cols="80" required></textarea> </td>
+                <td> <textarea name="content" required></textarea> </td>
             </tr>
         </table>
         <p style="color:red;" >{{ error }}</p>

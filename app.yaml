@@ -4,8 +4,11 @@ threadsafe: yes
 runtime: python27
 
 handlers:
+- url: /css
+  static_dir: css
 - url: .*
   script: main.app
+
 
 libraries:
 - name: webapp2
