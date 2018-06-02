@@ -50,6 +50,8 @@
 }
 
 .footer {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
     height: auto;
     grid-column: 1 / -1;
     align-self: baseline;
