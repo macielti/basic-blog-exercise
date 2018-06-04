@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <form style="font-family: sans-serif;" method="post">
+    <form class="form-post" method="post">
         <table>
             <tr>
                 <td>Title: </td>
@@ -12,6 +12,6 @@
             </tr>
         </table>
         <p style="color:red;" >{{ error }}</p>
-        <input style="font-size:14px;" type="submit" value="Post">
+        <center><button class="submit" style="font-size:14px;" type="submit">Post</button></center>
     </form>
 {% endblock %}

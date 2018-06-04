@@ -5,6 +5,7 @@
 }
 @media (max-width: 576px) {
     .container{
+        height: 100%;
         display: grid;
         grid-template: repeat(12, 1fr) / repeat(12, 1fr);
     }
@@ -38,6 +39,32 @@
         grid-row: 2 / 12;
     }
 
+    .form-post .submit {
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: right;
+        border: none;
+        background-color: gray;
+    }
+    .submit:hover {
+        background-color: white;
+        color: black;
+    }
+
+    .form-post {
+        padding: 15px;
+        margin-top: 25px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+    }
+    .form-post textarea {
+        margin-top: 10px;
+        height: 40vh;
+    }
+
     .post {
         margin-top: 30px;
     }
@@ -63,7 +90,7 @@
         text-align: center;
         text-decoration: none;
         color: white;
-        font-family: 15px;
+        font-size: 17px;
     }
 
 }
