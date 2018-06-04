@@ -2,22 +2,21 @@
 <html lang="pt" dir="ltr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="/css/style.css">
         <title>macielti's blog</title>
     </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <h1><a href="/">macielti's blog</a></h1>
-            </div>
-            <div class="article">
-                {% block content %}
-                {% endblock %}
-            </div>
-            <div class="footer">
-                <a href="/new-post">Make a new post.</a>
-                <a href="https://github.com/macielti" target="_blank">Developed with ❤️ by Bruno N. Maciel</a>
-            </div>
+    <body class="container">
+        <header class="header">
+            <h1><a href="/">macielti's blog</a></h1>
+        </header>
+        <div class="article">
+            {% block content %}
+            {% endblock %}
         </div>
+        <footer class="footer">
+            <a href="/new-post">Make a new post.</a>
+            <a href="https://github.com/macielti" target="_blank">Developed with ❤️ by Bruno N. Maciel</a>
+        </footer>
     </body>
 </html>

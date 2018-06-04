@@ -3,112 +3,67 @@
     margin: 0;
     font-family: sans-serif;
 }
-
-.container {
-    height: 100vh;
-    display: grid;
-    grid-template: repeat(12, 1fr) / repeat(12, 1fr);
-    grid-gap: 1vh;
-}
-
-.header {
-    font-size: 30px;
-    grid-column: 2 / 12;
-    text-align: center;
-    background-color: white;
-}
-.header a{
-    text-decoration: none;
-    color: black;
-}
-
-.article {
-    margin-top: 20px;
-    grid-column: 2 / 12;
-    grid-row: 2 / auto;
-}
-.article h2 {
-    font-size: 40px;
-}
-.article textarea{
-    width: 50vw;
-    height: 30vh;
-}
-.title {
-    width: 30vw;
-}
-.article table {
-}
-.article pre{
-    font-size: 17px;
-}
-.article p {
-    font-size: 14px;
-}
-.post {
-    margin-top: 5vh;
-}
-
-.footer {
-    display: grid;
-    grid-template: 1fr / 1fr 1fr;
-    height: auto;
-    grid-column: 1 / -1;
-    align-self: baseline;
-    color: white;
-    background-color: black;
-    grid-row: 13 / auto;
-}
-.footer a{
-    font-size: 2vw;
-    text-decoration: none;
-    color: white;
-}
-
-@media (max-width: 784px) and (min-width: 523px){
-    .container {
-        grid-gap: 0px;
-    }
-    .header h1 {
-        font-size: 30px;
-    }
-    .article {
-        margin-top: 5px;
-    }
-    .article h2 {
-        font-size: 25px;
-    }
-    .article pre {
-        font-size: 12px;
-    }
-
-    .footer a{
-        font-size: 20px;
-    }
-}
-
-@media (max-width:552px) {
+@media (max-width: 576px) {
     .container{
-        grid-template: repeat(12, 1fr) / 1fr;
-        grid-gap: 0px;
+        display: grid;
+        grid-template: repeat(12, 1fr) / repeat(12, 1fr);
     }
-    .header{
-        grid-column: 1 / -1;
+
+    .header a {
+        color: white;
+        text-decoration: none;
     }
+
     .header h1 {
-        font-size: 30px;
+        line-height: 100px;
+        color: white;
+        text-decoration: none;
     }
+
+    .header {
+        font-size: 21px;
+        text-align: center;
+        background-color: black;
+        grid-column: 1 / -1;
+        grid-row: 1/ 1;
+    }
+
+    .datetime{
+        color: gray;
+        font-size: 13px;
+    }
+
     .article {
-        grid-column: 1/-1;
-        margin-top: 5px;
+        grid-column: 2 / 12;
+        grid-row: 2 / 12;
     }
-    .article h2 {
-        font-size: 25px;
+
+    .post {
+        margin-top: 30px;
     }
-    .article pre {
-        font-size: 12px;
+
+    .post h2 {
+        text-align: center;
+    }
+
+    .text {
+        margin-top: 15px;
+        white-space: pre-wrap;
+    }
+
+    .footer {
+        display: grid;
+        grid-template: 1fr 1fr/ 1fr;
+        grid-column: 1 / -1;
+        grid-row: 13/ -1;
+        padding: 15px;
+        background-color: black;
     }
     .footer a{
-        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-family: 15px;
     }
+
 }
