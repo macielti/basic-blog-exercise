@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2 style="margin-bottom:5px;">{{ post.title }}</h2>
-    <hr>
-    <p style="color:gray; margin-top:0px;">{{post.created.strftime('%b %d, %Y')}}<p>
-    <pre>{{post.text}}</pre>
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <hr>
+        <p class="datetime">{{post.created.strftime('%b %d, %Y')}}</p>
+        <p class="text">{{post.text}}</p>
+    </div>
 {% endblock %}

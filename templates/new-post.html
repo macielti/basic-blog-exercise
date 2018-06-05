@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
     <form class="form-post" method="post">
-        <table>
-            <tr>
-                <td>Title: </td>
-                <td> <input class="title" type="text" name="title" value="{{ value }}" required> <br></td>
-            </tr>
-            <tr>
-                <td> Content: </td>
-                <td> <textarea name="content" required></textarea> </td>
-            </tr>
-        </table>
+
+        <label for="title">
+            Title
+            <input id='title' class="title" type="text" name="title" value="{{ value }}" required>
+        </label>
+        <label for="textarea">
+        Content<br>
+            <textarea id="textarea" name="content" wrap="off" required></textarea>
+        </label>
+
         <p style="color:red;" >{{ error }}</p>
         <center><button class="submit" style="font-size:14px;" type="submit">Post</button></center>
+
     </form>
 {% endblock %}

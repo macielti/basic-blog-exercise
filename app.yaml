@@ -1,5 +1,3 @@
-application: basic-blog-project
-version: 1
 threadsafe: yes
 runtime: python27
 
