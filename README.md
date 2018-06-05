@@ -9,4 +9,6 @@ This is a simple exercise for web development with python and Google App Engine.
  - Jinja2
  - Grid CSS
 
+ This project is responsive and  it is able to redefine the size of the elements to fit in a small screen.
+
 Link for visualization: [basic-blog-project.appspot.com](http://basic-blog-project.appspot.com/)
